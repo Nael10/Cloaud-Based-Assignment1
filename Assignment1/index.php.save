@@ -1,0 +1,19 @@
+<?php
+
+require 'vendor/autoload.php';
+
+$client = new \GuzzleHttp\Client();
+$header = ['headers' => ['Accept' => 'application/json']];
+
+$res = $client -> request ('GET', 'http://unicorns.idioti.se', $header);
+
+$data = json_decode($res->getBody());
+
+
+?>
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Example form </title>
+		<link rel="stylesheet" href="
